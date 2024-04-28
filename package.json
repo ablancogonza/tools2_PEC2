@@ -49,6 +49,8 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
     "stylelint-selector-bem-pattern": "^4.0.0"
   }
 }

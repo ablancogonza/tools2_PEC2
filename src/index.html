@@ -10,7 +10,7 @@
   <title>Concurso de Cocina Boadilla</title>
 </head>
 
-<body>
+<body class="fondo">
   <div class="container">
     <include src="./views/header.html"></include>
 
@@ -20,30 +20,45 @@
         <h4>Boadilla del Monte</h4>
       </div>
       <div class="poster__imagenprincipal">
-        <img class="imagen" src="/src/assets/images/comida.jpg" alt="Platos llenos de comida">
+        <picture>
+          <source srcset="/src/assets/images/comida.jpg?as=webp&width=1300" type="image/webp" />
+          <img class="imagen" src="/src/assets/images/comida.jpg?as=jpg&width=1300" alt="Platos llenos de comida" />
+        </picture>
       </div>
       <div class="poster__lugar">
-        <img class="imagen" src="/src/assets/images/palacio.jpg" alt="Palacio Infante Don Luis">
+        <picture>
+          <source srcset="/src/assets/images/palacio.jpg?as=webp&width=640" type="image/webp" />
+          <img class="imagen" src="/src/assets/images/palacio.jpg?as=jpg&width=640" alt="Palacio Infante Don Luis" />
+        </picture>
       </div>
       <div class="poster__concursoprevio">
-        <img class="imagen" src="/src/assets/images/master chef.jpg" alt="Concurso previo Master Chef">
+        <picture>
+          <source srcset="/src/assets/images/masterchef.jpg?as=webp&width=640" type="image/webp" />
+          <img class="imagen" src="/src/assets/images/masterchef.jpg?as=jpg&width=640" alt="Concurso previo Master Chef" />
+        </picture>
       </div>
       <div class="poster__cuando">
         <h3>Boadilla del Monte (Madrid)</h3>
         <h4>1 de julio de 2024. 10:00 h</h4>
       </div>
       <div class="poster__trabajando">
-        <img class="imagen" src="/src/assets/images/concurso.avif" alt="Cociner@s trabajando">
+        <picture>
+          <source srcset="/src/assets/images/concurso.avif?as=webp&width=640" type="image/webp" />
+          <img class="imagen" src="/src/assets/images/concurso.avif?as=jpg&width=640" alt="Cociner@s trabajando" />
+        </picture>
       </div>
       <div class="poster__presentacion">
-        <img class="imagen" src="/src/assets/images/charla.avif" alt="Cocinero presentando sus recetas">
+        <picture>
+          <source srcset="/src/assets/images/charla.avif?as=webp&width=640" type="image/webp" />
+          <img class="imagen" src="/src/assets/images/charla.avif?as=jpg&width=640" alt="Cocinero presentando sus recetas" />
+        </picture>
       </div>
       
     </main>
-
+  </div>
 
     <include src="./views/footer.html" locals='{ "inscribete": "footer__previo__visible" }'></include>
-  </div>
+
   <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
 </body>
 

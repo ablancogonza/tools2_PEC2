@@ -1,0 +1,42 @@
+.footer {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+
+    .footer__previo {
+        text-align: center;
+        margin: 2rem;
+    }
+
+    .footer__contenedor {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .footer__logo {
+            margin: 1rem;
+        }
+
+        .footer__enlaces {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .footer__social {
+            margin: 1rem;
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            flex-direction: column;    
+        }
+    }
+}

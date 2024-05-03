@@ -6,6 +6,16 @@
     .footer__previo {
         text-align: center;
         margin: 2rem;
+        display: none;
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+    }
+
+    .footer__previo__visible {
+        display: block;
     }
 
     .footer__contenedor {

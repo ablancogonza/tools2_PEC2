@@ -14,9 +14,35 @@
   <div class="container">
     <include src="./views/header.html"></include>
 
+    <main class="poster">
+      <div class="poster__titulo">
+        <h2>2º Concurso de Cocina</h2>
+        <h4>Boadilla del Monte</h4>
+      </div>
+      <div class="poster__imagenprincipal">
+        <img class="imagen" src="/src/assets/images/comida.jpg" alt="Platos llenos de comida">
+      </div>
+      <div class="poster__lugar">
+        <img class="imagen" src="/src/assets/images/palacio.jpg" alt="Palacio Infante Don Luis">
+      </div>
+      <div class="poster__concursoprevio">
+        <img class="imagen" src="/src/assets/images/master chef.jpg" alt="Concurso previo Master Chef">
+      </div>
+      <div class="poster__cuando">
+        <h3>Boadilla del Monte (Madrid)</h3>
+        <h4>1 de julio de 2024. 10:00 h</h4>
+      </div>
+      <div class="poster__trabajando">
+        <img class="imagen" src="/src/assets/images/concurso.avif" alt="Cociner@s trabajando">
+      </div>
+      <div class="poster__presentacion">
+        <img class="imagen" src="/src/assets/images/charla.avif" alt="Cocinero presentando sus recetas">
+      </div>
+      
+    </main>
 
-    
-    <include src="./views/footer.html"></include>
+
+    <include src="./views/footer.html" locals='{ "inscribete": "footer__previo__visible" }'></include>
   </div>
   <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
 </body>

@@ -1,0 +1,39 @@
+.participantes {
+
+    .participantes__cabecera {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+    }
+
+    .participantes__contenedor {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex: 1 1 0;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+.participante {
+    width: 300px;
+
+    .participante__foto {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+    }
+
+    .participante__nombre {
+        text-align: center;
+        font-weight: bold;
+    }
+}

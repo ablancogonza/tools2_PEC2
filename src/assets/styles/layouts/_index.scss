@@ -1,11 +1,4 @@
-
-.imagen {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.fondo {
+.index__fondo {
     background-color: #eee;
 }
 
@@ -21,6 +14,12 @@
         width: 100%;
         height: auto;
         margin: 0.2rem 0;
+
+        .imagen {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     .poster__lugar {
@@ -28,6 +27,12 @@
         width: 100%;
         height: auto;
         margin: 0.2rem 0;
+
+        .imagen {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     .poster__cuando {
@@ -40,6 +45,12 @@
         height: 100%;
         margin: 0.2rem 0;
         object-fit: cover;
+
+        .imagen {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     .poster__trabajando {
@@ -47,6 +58,12 @@
         width: 100%;
         height: auto;
         margin: 0.2rem 0;
+
+        .imagen {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     .poster__presentacion {
@@ -54,6 +71,12 @@
         width: 100%;
         height: auto;
         margin: 0.2rem 0;
+
+        .imagen {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     @media (max-width: $mqMinWidth-poster) {
@@ -75,72 +98,68 @@
     }
 }
 
+@supports (display: grid) {
 
-@layer consoportegrid {
+    @media (min-width: $mqMinWidth-poster) {
 
-    @supports (display: grid) {
+        .poster {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 1fr 3fr 1fr;
+            width: 100%;
+            gap: 0.2rem;
+        }
 
-        @media (min-width: $mqMinWidth-poster) {
+        .poster__titulo {
+            grid-column: 2/2;
+            grid-row: 1/1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-            .poster {
-                display: grid;
-                grid-template-columns: 1fr 3fr 1fr;
-                grid-template-rows: 1fr 3fr 1fr;
-                width: 100%;
-                gap: 0.2rem;
-            }
+        .poster__imagenprincipal {
+            width: 100%;
+            grid-column: 1/4;
+            grid-row: 2/2;
+            object-fit: cover;
+        }
 
-            .poster__titulo {
-                grid-column: 2/2;
-                grid-row: 1/1;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
+        .poster__lugar {
+            width: 100%;
+            grid-column: 1/1;
+            grid-row: 1/1;
 
-            .poster__imagenprincipal {
-                width: 100%;
-                grid-column: 1/4;
-                grid-row: 2/2;
-                object-fit: cover;
-            }
+        }
 
-            .poster__lugar {
-                width: 100%;
-                grid-column: 1/1;
-                grid-row: 1/1;
+        .poster__cuando {
+            grid-column: 2/2;
+            grid-row: 3/3;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-            }
+        .poster__concursoprevio {
+            width: 100%;
+            grid-column: 3/3;
+            grid-row: 1/1;
+        }
 
-            .poster__cuando {
-                grid-column: 2/2;
-                grid-row: 3/3;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
+        .poster__trabajando {
+            width: 100%;
+            grid-column: 1/1;
+            grid-row: 3/3;
+        }
 
-            .poster__concursoprevio {
-                width: 100%;
-                grid-column: 3/3;
-                grid-row: 1/1;
-            }
-
-            .poster__trabajando {
-                width: 100%;
-                grid-column: 1/1;
-                grid-row: 3/3;
-            }
-
-            .poster__presentacion {
-                width: 100%;
-                grid-column: 3/3;
-                grid-row: 3/3;
-            }
+        .poster__presentacion {
+            width: 100%;
+            grid-column: 3/3;
+            grid-row: 3/3;
         }
     }
 }

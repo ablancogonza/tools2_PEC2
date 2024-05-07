@@ -16,7 +16,7 @@
         </include>
         <div class="inscripcion">
             <h1 class="mb-3">Inscripción en el concurso</h1>
-            <form>
+            <form method="post" action="mailto:ablancogonza@uoc.edu" enctype="text/plain">
                 <div class="form-row">
                     <div class="col-md-12 mb-3">
                         <label for="nombre">Nombre</label>
@@ -73,7 +73,8 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-primary" type="submit">Inscribirse</button>
+                <p>El plazo de inscripción finaliza el 31 de mayo de 2024.</p>
+                <button class="btn btn-primary" type="submit">Inscríbeme</button>
             </form>
         </div>
         <include src="./views/footer.html" locals='{ "inscribete": "" }'></include>

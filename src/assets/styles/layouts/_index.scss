@@ -1,165 +1,196 @@
 .index__fondo {
     background-color: #eee;
 }
+@layer singrid, congrid;
 
-.poster {
-    margin: 2rem 0;
+@layer singrid {
 
-    .poster__titulo {
-        text-align: center;
-    }
+    .poster {
+        margin: 2rem 0;
+        container: poster / inline-size;
 
-    .poster__imagenprincipal {
-        display: block;
-        width: 100%;
-        height: auto;
-        margin: 0.2rem 0;
-
-        .imagen {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .poster__titulo {
+            text-align: center;
         }
-    }
 
-    .poster__lugar {
-        display: inline-block;
-        width: 100%;
-        height: auto;
-        margin: 0.2rem 0;
-
-        .imagen {
+        .poster__imagenprincipal {
+            display: block;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
+            height: auto;
+            margin: 0.5rem 0;
 
-    .poster__cuando {
-        text-align: center;
-    }
-
-    .poster__concursoprevio {
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        margin: 0.2rem 0;
-        object-fit: cover;
-
-        .imagen {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    .poster__trabajando {
-        display: inline-block;
-        width: 100%;
-        height: auto;
-        margin: 0.2rem 0;
-
-        .imagen {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    .poster__presentacion {
-        display: inline-block;
-        width: 100%;
-        height: auto;
-        margin: 0.2rem 0;
-
-        .imagen {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    @media (max-width: $mqMinWidth-poster) {
-        .poster__concursoprevio {
-            width: calc(50% - 0.4rem);
+            .imagen {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
 
         .poster__lugar {
-            width: calc(50% - 0.4rem);
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            margin: 0.5rem;
+
+            .imagen {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                aspect-ratio: 1;
+            }
+        }
+
+        .poster__cuando {
+            text-align: center;
+        }
+
+        .poster__concursoprevio {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            margin: 0.5rem 0;
+
+            .imagen {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                aspect-ratio: 1;
+            }
         }
 
         .poster__trabajando {
-            width: calc(50% - 0.4rem);
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            margin: 0.5rem 0;
+
+            .imagen {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                aspect-ratio: 1;
+            }
         }
 
         .poster__presentacion {
-            width: calc(50% - 0.4rem);
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            margin: 0.2rem 0;
+
+            .imagen {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                aspect-ratio: 1;
+            }
+        }
+
+        @container poster (min-width: #{$cqAnchoUnaColumna}) {
+            .poster__concursoprevio {
+                margin: 0.2rem 0;
+                width: calc(50% - 0.2rem);
+                height: 100%;
+            }
+
+            .poster__lugar {
+                margin: 0.2rem 0;
+                width: calc(50% - 0.2rem);
+            }
+
+            .poster__trabajando {
+                margin: 0.2rem 0;
+                width: calc(50% - 0.4rem);
+            }
+
+            .poster__presentacion {
+                margin: 0.2rem 0;
+                width: calc(50% - 0.4rem);
+            }
         }
     }
 }
 
-@supports (display: grid) {
+@layer congrid {
+    @supports (display: grid) {
 
-    @media (min-width: $mqMinWidth-poster) {
+        @media (min-width: #{$cqAnchoUnaColumna}) {
 
-        .poster {
-            display: grid;
-            grid-template-columns: 1fr 3fr 1fr;
-            grid-template-rows: 1fr 3fr 1fr;
-            width: 100%;
-            gap: 0.2rem;
-        }
+            .poster {
+                display: grid;
+                grid-template-columns: 1fr 3fr 1fr;
+                grid-template-rows: 1fr 3fr 1fr;
+                width: 100%;
+                gap: 0.2rem;
 
-        .poster__titulo {
-            grid-column: 2/2;
-            grid-row: 1/1;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+                .poster__titulo {
+                    grid-column: 2/2;
+                    grid-row: 1/1;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    h2 {
+                        font-size: 5cqw;
+                    }
 
-        .poster__imagenprincipal {
-            width: 100%;
-            grid-column: 1/4;
-            grid-row: 2/2;
-            object-fit: cover;
-        }
+                    h4 {
+                        font-size: 4cqw;
+                    }
+                }
 
-        .poster__lugar {
-            width: 100%;
-            grid-column: 1/1;
-            grid-row: 1/1;
+                .poster__imagenprincipal {
+                    width: 100%;
+                    grid-column: 1/4;
+                    grid-row: 2/2;
+                    object-fit: cover;
+                }
 
-        }
+                .poster__lugar {
+                    width: 100%;
+                    grid-column: 1/1;
+                    grid-row: 1/1;
 
-        .poster__cuando {
-            grid-column: 2/2;
-            grid-row: 3/3;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+                }
 
-        .poster__concursoprevio {
-            width: 100%;
-            grid-column: 3/3;
-            grid-row: 1/1;
-        }
+                .poster__cuando {
+                    grid-column: 2/2;
+                    grid-row: 3/3;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
 
-        .poster__trabajando {
-            width: 100%;
-            grid-column: 1/1;
-            grid-row: 3/3;
-        }
+                    h3 {
+                        font-size: 4cqw;
+                    }
 
-        .poster__presentacion {
-            width: 100%;
-            grid-column: 3/3;
-            grid-row: 3/3;
+                    h4 {
+                        font-size: 3cqw;
+                    }
+                }
+
+                .poster__concursoprevio {
+                    width: 100%;
+                    grid-column: 3/3;
+                    grid-row: 1/1;
+                }
+
+                .poster__trabajando {
+                    width: 100%;
+                    grid-column: 1/1;
+                    grid-row: 3/3;
+                }
+
+                .poster__presentacion {
+                    width: 100%;
+                    grid-column: 3/3;
+                    grid-row: 3/3;
+                }
+            }
         }
     }
 }

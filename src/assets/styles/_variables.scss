@@ -6,12 +6,7 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
 $theme-colors: (
- "primary": #2225d4 // pon el código de color que prefieras
+ "primary": #FFD43C 
 );
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
-
-$mqMinWidth: 420px;
-$mqMinWidth-poster: 451px;
+$cqAnchoUnaColumna: 500px;

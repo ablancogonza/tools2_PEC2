@@ -1,5 +1,8 @@
 .banner {
-    margin: 2rem 0;
+   
+    &:has(.banner__picture) {
+        margin: 2rem 0;
+    }
 
     .banner__picture {
 
@@ -24,7 +27,12 @@
     .articulo__parrafo {
         max-width: 900px;
         margin: 2rem auto;
+
+        &:has(.articulo__parrafo) {
+            border-bottom: 1px solid red;
+        }
     }
+
 
     .articulo__contenedorimagen {
 
@@ -40,3 +48,8 @@
         margin: 1.5rem auto;
     }
 }
+
+figure > :where(figcaption) {
+    text-align: end;
+}
+

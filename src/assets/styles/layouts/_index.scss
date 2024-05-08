@@ -1,6 +1,7 @@
 .index__fondo {
-    background-color: #eee;
+    background-color: color(display-p3 0.93 0.93 0.93 / 1);
 }
+
 @layer singrid, congrid;
 
 @layer singrid {
@@ -131,7 +132,7 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    
+
                     h1 {
                         font-size: 5cqw;
                     }
